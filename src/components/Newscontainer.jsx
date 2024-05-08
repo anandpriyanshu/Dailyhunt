@@ -40,7 +40,7 @@ const Newscontainer = ({ category }) => {
 
                     {
                         article.map((ele, i) => {
-                            return <Cards key={i} title={ele.title} description={ele.description} image={ele.urlToImage} url={ele.url} />
+                            return <Cards key={i} title={ele.title} description={ele.description} image={ele.urlToImage} url={ele.url} publish={ele.publishedAt} />
                         })
 
                     }
