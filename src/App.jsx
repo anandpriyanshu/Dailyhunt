@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
-import Cards from './components/Cards'
+
 import Newscontainer from './components/Newscontainer'
 
 const App = () => {
+
+  const [category, setcategory] = useState('general')
 
 
   // const [article, setarticle] = useState([])
@@ -39,7 +41,7 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar setcategory={setcategory} />
 
       {/* <div className="flex flex-col items-center justify-center ">
 
@@ -53,7 +55,7 @@ const App = () => {
           }
         </div>
       </div> */}
-      <Newscontainer />
+      <Newscontainer category={category} />
 
 
 
